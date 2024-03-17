@@ -1,113 +1,93 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Book, BookDashed, BookText, CircleDot, Dot, Library, Rocket, Sparkles, UploadCloud } from "lucide-react";
+import { Badge } from "@/components/ui/badge"
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="flex justify-center align-middle items-center flex-col px-4 md:px-20 md:pt-4 w-full"> 
+      <div className="flex gap-2 mt-20">
+        <Badge variant={"outline"} className="flex gap-1"><span>AI Powered</span><Sparkles width={16}/></Badge>
+        {/* <Badge variant={"outline"} className="flex gap-1"><span>Upload Photos</span><UploadCloud width={16}/></Badge> */}
+      </div>
+      <h1 className="flex mt-1 md:w-full lg:w-2/3 font-bold text-3xl sm:text-4xl md:text-6xl text-center"><span className="bg-gradient-to-r dark:from-blue-500 dark:via-purple-600 dark:to-red-500  from-blue-500 via-purple-600 to-red-500  text-transparent bg-clip-text p-2">The Art of Design, Perfected!</span></h1>
+      <p className="flex mt-4 font-medium text-muted-foreground md:text-xl text-sm md:w-full lg:w-2/3 px-2 text-center">Vagency's designs are crafted to perfection, ensuring that every element is thoughtfully considered and flawlessly executed. </p>
+      <div className="hidden mt-6 md:flex md:gap-4 gap-2"><Button size={"default"} className="flex gap-2"><span>Get Started</span><Sparkles size={22}/></Button><Button variant={"outline"} size={"default"} className="flex gap-2"><span>Documentation</span><BookText width={22}/></Button></div>
+      <div className="hidden mt-6 max-md:flex md:gap-4 gap-2"><Button size={"sm"} className="flex gap-2"><span>Get Started</span><Sparkles size={22}/></Button><Button variant={"secondary"} size={"sm"} className="flex gap-2"><span>Docs</span><BookText width={22}/></Button></div>
+      
+      
+      <div className="flex flex-wrap justify-center mt-6">
+      <div className="w-full sm:w-1/2 md:w-1/4 p-2">
+        <img src="example1.png" alt="Image 1" className="w-full h-auto" />
+      </div>
+      <div className="w-full sm:w-1/2 md:w-1/4 p-2">
+        <img src="example2.png" alt="Image 2" className="w-full h-auto" />
+      </div>
+      <div className="w-full sm:w-1/2 md:w-1/4 p-2">
+        <img src="example3.png" alt="Image 3" className="w-full h-auto" />
+      </div>
+      <div className="w-full sm:w-1/2 md:w-1/4 p-2">
+        <img src="example4.png" alt="Image 4" className="w-full h-auto" />
+      </div>
+    </div>
+    <div className="backdrop-blur-lg mt-2 shadow-lg ">
+        <Image src="/example.png" width={1400} height={400} alt="logo" className=" p-2 border rounded-sm"/>
+      </div>
+      
+      
+      <div>
+        <h2 className="text-6xl mt-8 flex justify-center">Pricing Plans</h2>
+        <p className="text-xl text-muted-foreground mt-4 flex justify-center">Our pricing plans are designed to be affordable,flexible, and tailored to your unique needs.</p>
+        <div>
+        <div className="flex mt-4 justify-center">
+          <button className="py-2 px-4 bg-primary/80 rounded-sm font-semibold focus:outline-none">Monthly</button>
+          <button className="py-2 px-4  font-semibold focus:outline-none">Yearly</button>
+        </div>
+        {/* --------------------- */}
+      <div className="flex flex-row gap-8">
+        <div className="flex mt-8">
+          <div className="flex justify-center -mx-4">
+          <div className="w-full md:w-full px-4 mb-8">
+            <div className="bg-secondary rounded-lg shadow-md p-8">
+              <h3 className="text-lg font-semibold text-foreground mb-4">Basic</h3>
+              <p className="text-muted-foreground mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p className="text-2xl font-semibold text-foreg mb-4">$9.99/mo</p>
+              <Button className="w-full text-lg text-foreground font-medium">Choose Plan</Button>
+            </div>
+          </div>
+          </div>
+        </div>
+        
+        <div className="flex mt-8">
+          <div className="flex justify-center -mx-4">
+          <div className="w-full md:w-full px-4 mb-8">
+            <div className="bg-secondary rounded-lg shadow-md p-8">
+              <h3 className="text-lg font-semibold text-foreground mb-4">Standard</h3>
+              <p className="text-muted-foreground mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p className="text-2xl font-semibold text-foreg mb-4">$9.99/mo</p>
+              
+              <Button className="w-full text-lg text-foreground font-medium">Choose Plan</Button>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div className="flex mt-8">
+          <div className="flex justify-center -mx-4">
+          <div className="w-full md:w-full px-4 mb-8">
+            <div className="bg-secondary rounded-lg shadow-md p-8">
+              <h3 className="text-lg font-semibold text-foreground mb-4">Premium</h3>
+              <p className="text-muted-foreground mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p className="text-2xl font-semibold text-foreg mb-4">$9.99/mo</p>
+              <Button className="w-full text-lg text-foreground font-medium">Choose Plan</Button>
+            </div>
+          </div>
+          </div>
+        </div>
+        </div>
+
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }
