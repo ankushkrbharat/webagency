@@ -64,8 +64,7 @@ export default function Home() {
             <div className="bg-secondary rounded-lg shadow-md p-8">
               <h3 className="text-lg font-semibold text-foreground mb-4">Standard</h3>
               <p className="text-muted-foreground mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <p className="text-2xl font-semibold text-foreg mb-4">$9.99/mo</p>
-              
+              <p className="text-2xl font-semibold text-foreg mb-4">$9.99/mo</p>              
               <Button className="w-full text-lg text-foreground font-medium">Choose Plan</Button>
             </div>
           </div>
