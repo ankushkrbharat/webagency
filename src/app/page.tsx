@@ -35,21 +35,21 @@ export default function Home() {
       </div>
       
       
-      <div>
+      <div className="flex flex-col">
         <h2 className="text-6xl mt-8 flex justify-center">Pricing Plans</h2>
-        <p className="text-xl text-muted-foreground mt-4 flex justify-center">Our pricing plans are designed to be affordable,flexible, and tailored to your unique needs.</p>
+        <p className="text-xl text-muted-foreground text-center mt-4 flex justify-center">Our pricing plans are designed to be affordable,flexible, and tailored to your unique needs.</p>
         <div>
         <div className="flex mt-4 justify-center">
           <button className="py-2 px-4 bg-primary/80 rounded-sm font-semibold focus:outline-none">Monthly</button>
           <button className="py-2 px-4  font-semibold focus:outline-none">Yearly</button>
         </div>
         {/* --------------------- */}
-      <div className="flex flex-row gap-8">
+      <div className="flex md:flex-row flex-col gap-8">
         <div className="flex mt-8">
           <div className="flex justify-center -mx-4">
           <div className="w-full md:w-full px-4 mb-8">
-            <div className="bg-secondary rounded-lg shadow-md p-8">
-              <h3 className="text-lg font-semibold text-foreground mb-4">Basic</h3>
+            <div className="bg-secondary rounded-lg shadow-md p-8 px-8">
+              <h3 className="text-lg font-semibold text-foreground  mb-4">Basic</h3>
               <p className="text-muted-foreground mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               <p className="text-2xl font-semibold text-foreg mb-4">$9.99/mo</p>
               <Button className="w-full text-lg text-foreground font-medium">Choose Plan</Button>
